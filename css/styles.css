@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.boton-ver-mas {/*Diseño del botón*/
+    background-color: #444EBB;
+    border: none;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: auto;
+    padding: 8px 16px;
+}
+
+.icono-corazon {
+    justify-content: flex-start;
+    position: absolute;
+}
+
+main {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px; /* Añadir un poco de espacio a los lados */
+}
+
+.imagen-perfil {/*Diseño imagenes de perfil de las cajas*/
+    align-self: center; /* Alinear la imagen de perfil en el centro vertical */
+    background-color: white;
+    border-radius: 70%;
+    height: 100px;
+    margin-top: 80px;
+    width: 100px;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px 0; /* Añadir margen arriba y abajo */
+}
+
+.card-batman, .card-mujermaravilla, .card-superman, .card-harleyquinn{/* Diseño de las tarjetas de los heroes */
+    background-color: rgba(240, 237, 236, 0.5);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 5px 2px 0px rgba(202, 199, 198, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 10px; /* Añadir un pequeño margen entre las tarjetas */
+    max-width: 100%; /* Asegurarse de que la imagen no se desborde */
+    width: 20%;
+}
+
+.card-batman{
+    background-image: url('../img/FondoBatman.png');
+}
+
+.card-mujermaravilla{
+    background-image: url('../img/FondoMaravilla.png');
+}
+
+.card-superman{
+    background-image: url('../img/FondoSuperman.png');
+}
+
+.card-harleyquinn{
+    background-image: url('../img/FondoHarley.png');
+}
+
+.descuento{/*Diseño del título de descuento*/
+    background-color: #F6824B;
+    color: #0D1606;
+    display: flex;
+    font-size: small;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding: 5px 0;
+}
+
+h1{/*Diseño del título principal*/
+    background-color: #444EBB;
+    color: #0D1606;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 20px 0;
+}
+
+article {
+    align-items: center; /* Centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Para que las tarjetas tengan altura total */
+    text-align: center; /* Centrar el texto */
+}
+
+p{
+    font-family: Arial, sans-serif; /* Establecer la fuente de letra */
+    font-size: 14px; /* Establecer el tamaño de letra */
+    margin-top: 10px;
+    text-align: justify; /* Alinear el texto de los párrafos */
+}
+
+.names{
+    font-size: 20px; /* Ajustar el tamaño de la letra */
+    text-transform: uppercase; /* Cambiar el texto a mayúsculas */
+}
+
+footer {/* Añadir diseño al footer */
+    align-items: center;
+    background-color: #444EBB;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    text-align: center;
+}
+
+footer span:first-child {
+    color: white;
+    flex: 1; /* Ocupar el espacio disponible */
+}
+
+footer span:last-child {
+    color: white; /* Color blanco para el segundo span */
+    font-size: 25px; /* Tamaño de fuente más grande para el segundo texto */
+    margin-left: auto;
+}
+
+.boton-mas {
+    align-items: center;
+    background-color: blue;
+    border: none;
+    border-radius: 50%; /* Hace el botón circular */
+    color: white;
+    display: flex;
+    font-size: 24px;
+    height: 36px;
+    justify-content: center;
+    position: fixed; /* Dejarlo fijo */
+    right: 10px;
+    width: 36px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 20px 0; /* Añadir margen arriba y abajo */
+    }
+
+    .card-batman, .card-mujermaravilla, .card-superman, .card-harleyquinn {
+        max-width: 100%; /* Asegurarse de que la imagen no se desborde */
+        width: 45%; /* Cambiar el ancho de las tarjetas para mostrar dos por fila */
+    }
+
+    .boton-mas {
+        top: 45%;
+    }
+}
+
+@media (max-width: 450px) { 
+    .container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card-batman, .card-mujermaravilla, .card-superman, .card-harleyquinn {
+        height: 90%;
+        width: 50%; /* Cambiar el ancho de las tarjetas para mostrar todas en una columna */
+    }
+
+    .boton-mas {
+        top: 50%;
+    }
+}
